@@ -40,7 +40,11 @@ public class Collatz_Conjecture {
     }
 
     private Integer computeNextTerm(Integer term) {
-        return term % 2 == 0 ? term / 2 : term * 3 + 1;
+        if (term % 2 == 0) {
+            return term / 2;
+        } else {
+            return term * 3 + 1;
+        }
     }
 
     /**
