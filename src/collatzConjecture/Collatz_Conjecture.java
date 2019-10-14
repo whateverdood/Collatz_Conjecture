@@ -52,14 +52,10 @@ public class Collatz_Conjecture {
 
         Collatz_Conjecture collatz = new Collatz_Conjecture();
 
-        List<Integer> expectedSequence = Arrays.asList(28, 14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2);
-        List<Integer> computedSequence = collatz.computeSequence(28);
-        assert(computedSequence.containsAll(expectedSequence));
-        System.out.println("Sequence for 28 is: " + computedSequence);
-
-        expectedSequence = Arrays.asList(29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2);
-        computedSequence = collatz.computeSequence(29);
-        assert(computedSequence.containsAll(expectedSequence));
-        System.out.println("Sequence for 29 is: " + computedSequence);
+        for (Integer i = 1; i <= 30; i++) {
+            System.out.println("n = " + i);
+            System.out.println(collatz.computeSequence(i));
+        }
     }
+
 }
